@@ -1,0 +1,13 @@
+{namespace n=Tx_News_ViewHelpers}
+
+<f:if condition="{settings.cssFile}">
+	<n:includeFile path="{settings.cssFile}" />
+</f:if>
+
+<div class="news news-single">
+	<div class="article">
+		<f:render section="content" />
+	</div>
+	<div id="disqus_thread"></div>
+	<n:social.disqus newsItem="{newsItem}" shortName="{settings.disqusShortname}" link="{settings.disqusUrl}{n:link(newsItem:newsItem,settings:settings,uriOnly:1)}"/>
+</div>

@@ -1,0 +1,65 @@
+<f:switch expression="{data.flexform_blockType}">
+	<f:case value="link">
+		<div class="col-md-2 col-sm-3 item">
+			<div class="hokje">
+				<f:link.page pageUid="{data.flexform_blockLink}" class="content" title="{f:if(condition: data.flexform_blockLinkTitle, then: data.flexform_blockLinkTitle)}">
+					<f:if condition="{data.flexform_backgroundIcon}=={'meld', 'afval', 'paspoort', 'besluit', 'woz', 'bestemming','evenement', 'tijden', 'verkeer', 'winkel', 'bedrijf', 'vergunning', 'oVerkeer', 'start', 'subsidie', 'weblog', 'overig', 'college', 'contact', 'zoek', 'kalender', 'raadstuk', 'subsidie', 'agenda', 'collegeraad'}">
+						<div class="sprite {data.flexform_backgroundIcon}Icon"></div>
+					</f:if>
+					<span class="title">{data.flexform_blockTitle}</span>
+				</f:link.page>
+			</div>
+		</div>
+	</f:case>
+	<f:case value="sidelink">
+		<div class="col-md-2 col-sm-3">
+			<div class="hokje">
+				<f:link.page pageUid="{data.flexform_blockLink}" class="content groen" title="{f:if(condition: data.flexform_blockLinkTitle, then: data.flexform_blockLinkTitle)}">
+					<f:if condition="{data.flexform_backgroundIcon}=={'meld', 'afval', 'paspoort', 'besluit', 'woz', 'bestemming','evenement', 'tijden', 'verkeer', 'winkel', 'bedrijf', 'vergunning', 'oVerkeer', 'start', 'subsidie', 'weblog', 'overig', 'college', 'contact', 'zoek', 'kalender', 'raadstuk', 'subsidie', 'agenda', 'collegeraad'}">
+						<div class="sprite {data.flexform_backgroundIcon}Icon"></div>
+					</f:if>
+					<span class="title">{data.flexform_blockTitle}</span>
+				</f:link.page>
+			</div>
+		</div>
+	</f:case>
+	<f:case value="image">
+		<div class="col-md-2 col-sm-3 item">
+			<div class="hokje">
+				<div class="content" style="background-image: url('{f:uri.image(src: 'uploads/{data.flexform_backgroundImage}', maxWidth: 300)}');"></div>
+			</div>
+		</div>
+	</f:case>
+	<f:case value="titlelink">
+		<div class="col-md-2 col-sm-3 item">
+			<div class="knop">
+				<f:link.page pageUid="{data.flexform_blockLink}" class="content" title="{f:if(condition: data.flexform_blockLinkTitle, then: data.flexform_blockLinkTitle)}">
+					<span class="title">{data.flexform_blockTitle}</span>
+				</f:link.page>
+			</div>
+		</div>
+	</f:case>
+	<f:case value="quote">
+		<div class="col-md-4 col-sm-6 item hidden-xs">
+			<div class="hokje">
+				<f:if condition="{data.flexform_blockQuote}">
+					<f:then>
+						<f:link.page pageUid="{data.flexform_blockLink}" class="content" title="{f:if(condition: data.flexform_blockLinkTitle, then: data.flexform_blockLinkTitle)}">
+							<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+								<div class="flipper">
+									<div class="front" style="background-image: url('{f:uri.image(src: 'uploads/{data.flexform_backgroundImage}', maxWidth: 400)}');"></div>
+									<div class="back">
+										<blockquote>"{data.flexform_blockQuote}"</blockquote>
+									</div>
+								</div>
+							</div>
+						</f:link.page>
+					</f:then>
+					<f:else>
+						<f:link.page pageUid="{data.flexform_blockLink}" class="content" title="{f:if(condition: data.flexform_blockLinkTitle, then: data.flexform_blockLinkTitle)}" style="background-image: url('{f:uri.image(src: 'uploads/{data.flexform_backgroundImage}', maxWidth: 400)}');"></f:link.page>
+					</f:else>
+				</f:if>
+			</div>
+		</div>
+	</f:case>
+</f:switch>

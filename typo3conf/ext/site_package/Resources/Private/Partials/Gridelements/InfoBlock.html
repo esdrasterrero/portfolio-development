@@ -1,0 +1,47 @@
+<div class="col-md-2 col-sm-3">
+	<div class="hokjeBestuur">
+		<div class="content" style="background-image: url('{f:uri.image(src: 'uploads/{data.flexform_boxImage}', maxWidth: 200)}');">
+			<div class="mouseOver">
+				<f:if condition="{data.flexform_boxName}">
+					<H4>{data.flexform_boxName}</H4>
+				</f:if>
+				{data.flexform_boxFunction} {data.flexform_boxFaction}
+			</div>
+			<div class="hiddenInfo" style="display:none;">
+				<div class="bestuurFoto" style="background-image: url('{f:uri.image(src: 'uploads/{data.flexform_boxImage}', maxWidth: 200)}');"></div>
+				<div class="bestuurInfo">
+					<h4>{data.flexform_boxName}</h4>
+					<p>{data.flexform_boxFunction} {data.flexform_boxFaction}</p>
+				</div>
+				<f:if condition="{data.flexform_boxFunction}">
+					<p><strong>Functie: </strong>{data.flexform_boxFunction}</p>
+				</f:if>
+				<p>
+					<f:if condition="{data.flexform_boxAddress}">
+						<strong>Adres: </strong>{data.flexform_boxAddress}<br />
+					</f:if>
+					<f:if condition="{data.flexform_boxTelephone}">
+						<strong>Telefoonnummer: </strong>{data.flexform_boxTelephone}<br />
+					</f:if>
+					<f:if condition="{data.flexform_boxEmail}">
+						<strong>E-mail adres: </strong><f:link.email email="{data.flexform_boxEmail}">{data.flexform_boxEmail}</f:link.email><br />
+					</f:if>
+					<f:if condition="{data.flexform_boxWebsite}">
+						<strong>Website: </strong><f:link.external uri="{data.flexform_boxWebsite}" target="_blank">{data.flexform_boxWebsite}</f:link.external>
+					</f:if>
+				</p>
+				<f:if condition="{data.flexform_boxMisc}">
+					<p><strong>Nevenfuncties: </strong>{data.flexform_boxMisc}</p>
+				</f:if>
+
+				<f:if condition="{data.flexform_boxTwitter}">
+					<p><strong>Twitter: </strong><f:link.external uri="//twitter.com/{data.flexform_boxTwitter}" target="_blank">{data.flexform_boxTwitter}</f:link.external></p>
+				</f:if>
+
+				<f:if condition="{data.flexform_boxLinkedin}">
+					<p><strong>LinkedIn: </strong><f:link.external uri="{data.flexform_boxLinkedin}" target="_blank">Bekijk Profiel</f:link.external></p>
+				</f:if>
+			</div>
+		</div>
+	</div>
+</div>

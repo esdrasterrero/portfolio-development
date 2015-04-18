@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<Content>
+			<ROOT>
+				<type>array</type>
+				<el>
+					<blockType>
+						<TCEforms type="array">
+							<label>Block Type</label>
+							<onChange>reload</onChange>
+							<config type="array">
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">Link</numIndex>
+										<numIndex index="1">link</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">Image</numIndex>
+										<numIndex index="1">image</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">Quote</numIndex>
+										<numIndex index="1">quote</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</blockType>
+
+					<backgroundIcon type="array">
+						<TCEforms type="array">
+							<label>Icoon</label>
+							<displayCond>FIELD:blockType:=:link</displayCond>
+							<config type="array">
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">Geen Icoon</numIndex>
+										<numIndex index="1">none</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">Melding</numIndex>
+										<numIndex index="1">meld</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">Paspoort</numIndex>
+										<numIndex index="1">paspoort</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">Besluit</numIndex>
+										<numIndex index="1">besluit</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">Afval</numIndex>
+										<numIndex index="1">afval</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">Huis (WOZ)</numIndex>
+										<numIndex index="1">woz</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">Bestemming</numIndex>
+										<numIndex index="1">bestemming</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">Evenement</numIndex>
+										<numIndex index="1">evenement</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="0">Tijden</numIndex>
+										<numIndex index="1">tijden</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="0">Verkeer</numIndex>
+										<numIndex index="1">verkeer</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</backgroundIcon>
+
+					<backgroundImage type="array">
+						<TCEforms type="array">
+							<label>Achtergrond afbeelding</label>
+							<displayCond>
+								<OR>
+									<numIndex index="0">FIELD:blockType:=:image</numIndex>
+									<numIndex index="1">FIELD:blockType:=:quote</numIndex>
+								</OR>
+							</displayCond>
+							<config type="array">
+								<type>group</type>
+								<internal_type>file</internal_type>
+								<allowed>gif, jpg,jpeg,png,csv</allowed>
+								<max_size>20000</max_size>
+								<uploadfolder>uploads/</uploadfolder>
+								<maxitems>1</maxitems>
+								<size>1</size>
+								<show_thumbs>1</show_thumbs>
+								<selectedliststyle>Width:180px</selectedliststyle>
+							</config>
+						</TCEforms>
+					</backgroundImage>
+
+					<blockTitle>
+						<TCEforms>
+							<label>Titel</label>
+							<displayCond>FIELD:blockType:=:link</displayCond>
+							<config>
+								<type>text</type>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</blockTitle>
+
+					<blockLink type="array">
+						<TCEforms type="array">
+							<label>Link</label>
+							<displayCond>
+								<OR>
+									<numIndex index="0">FIELD:blockType:=:link</numIndex>
+									<numIndex index="1">FIELD:blockType:=:quote</numIndex>
+								</OR>
+							</displayCond>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>1</show_thumbs>
+								<wizards>
+									<suggest>
+										<type>suggest</type>
+									</suggest>
+								</wizards>
+							</config>
+						</TCEforms>
+					</blockLink>
+
+					<blockQuote>
+						<TCEforms>
+							<label>Quote Tekst</label>
+							<displayCond>FIELD:blockType:=:quote</displayCond>
+							<config>
+								<type>text</type>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</blockQuote>
+				</el>
+			</ROOT>
+		</Content>
+	</sheets>
+</T3DataStructure>

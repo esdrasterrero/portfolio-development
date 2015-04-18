@@ -1,0 +1,32 @@
+<f:layout name="Default" />
+<f:section name="Main">
+	<section id="content" data-spy="scroll">
+		<div class="row">
+			<div class="col-sm-2">
+				<div class="sticky">
+					<div class="row">
+						<!-- Content Left -->
+						<f:cObject typoscriptObjectPath="lib.dynamicContent" data="1" />
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-10">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="detail az">
+							<div class="sticky" id="myScrollspy">
+								<!-- A-Z Menu -->
+								<f:cObject typoscriptObjectPath="lib.dynamicContent" data="2" />
+							</div>
+							<P></P>
+							<!-- Menu Items -->
+							<f:cObject typoscriptObjectPath="lib.dynamicContent" data="0" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+</f:section>

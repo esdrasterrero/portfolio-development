@@ -1,0 +1,50 @@
+<style>
+	table.nieuwsbrief {width: 601px; font-family: "Open Sans",sans-serif;}
+	table.nieuwsbrief tr {background-color: #fff;}
+	table.nieuwsbrief tr.geel {background-color:  #f2d03b;}
+	table.nieuwsbrief tr td.date {color: #666; font-size: 15px; font-weight: bold; letter-spacing: -1px;}
+	table.nieuwsbrief tr td.menu {padding: 10px 20px;}
+	table.nieuwsbrief tr td.menu ul {list-style: none; padding: 0px; margin: 0px;}
+	table.nieuwsbrief tr td.menu ul li {padding: 1px 0px;}
+	table.nieuwsbrief tr td.menu ul li:after {content: " >"; color: #666; font-weight: bolder; font-size: 13px;}
+	table.nieuwsbrief tr td.menu ul li:hover:after {color: #00a77f;}
+	table.nieuwsbrief tr td.menu ul li a {color: #666; font-weight: bold; font-size: 13px;}
+	table.nieuwsbrief tr td.menu ul li a:hover {color: #00a77f;}
+	table.nieuwsbrief tr td.content {padding: 10px 20px;}
+	table.nieuwsbrief tr td.content div.bericht {background-color: #fff; padding: 15px; float: left;}
+	table.nieuwsbrief tr td.content div.bericht h3 {padding: 0px; margin: 0 0 10px 0; font-family: Bookman,Georgia,"Times New Roman",serif;}
+	table.nieuwsbrief tr td.content div.bericht p {padding: 0px; margin: 10px 0 0 0; font-size: 13px;}
+	table.nieuwsbrief tr td.content div.bericht > p:last-of-type {clear: both;}
+	table.nieuwsbrief tr td.content div.bericht p a img {float: right;}
+	table.nieuwsbrief tr td.content div.bericht img.foto {float: right; padding-left: 60px; padding-bottom: 10px;}
+	table.nieuwsbrief tr:last-of-type {text-align: center;}
+	table.nieuwsbrief tr:last-of-type td, table.nieuwsbrief tr:last-of-type td a, table.nieuwsbrief tr td.content div.bericht p a {color: #00a77f; font-weight: bold; font-size: 13px;}
+	table.nieuwsbrief tr td.content div.bericht div.image-intext div.image-wrap {max-width: 50%; padding-left: 20px; padding-bottom: 20px; padding-right: 15px; float: right; margin-right: -15px;}
+	table.nieuwsbrief tr td.content div.bericht div.image-intext div.image-wrap img {display: block; max-width: 100%; height: auto;}
+</style>
+
+<table class="nieuwsbrief" align="center" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td colspan="2">
+			<img src="###RESOURCE###images/news/news_01.jpg">
+		</td>
+	</tr>
+	<tr>
+		<td width="490px">
+			<img src="###RESOURCE###images/news/news_02.jpg">
+		</td>
+		###HEADERTEXT###
+	</tr>
+	<tr>
+		<td colspan="2">
+			<img src="###RESOURCE###images/news/news_03.jpg">
+		</td>
+	</tr>
+
+	###CONTENT###
+	<tr>
+		<td colspan="2" class="content">
+			###FOOTERUNSUBSCRIBE### | ###FOOTEREDIT### | ###FOOTERABOUT### | ###FOOTERCONTACT###
+		</td>
+	</tr>
+</tabl

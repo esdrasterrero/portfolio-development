@@ -1,0 +1,39 @@
+<header>
+	<div class="row">
+		<div class="col-xs-8 col-sm-6">
+
+			<f:link.page pageUid="{homepage}" title="Gemeente Woudenberg">
+				<div class="sprite logo"></div>
+			</f:link.page>
+		</div>
+		<div class="col-xs-6 hidden-xs searchContainer">
+			<div class="row">
+				<f:cObject typoscriptObjectPath="lib.topMenu" />
+				<f:cObject typoscriptObjectPath="lib.headerButtons" />
+				<f:format.raw>
+					<f:cObject typoscriptObjectPath="lib.googleSearch.form" />
+				</f:format.raw>
+				<div class="col-sm-12">
+					<f:cObject typoscriptObjectPath="lib.indexMenu" />
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-4 visible-xs searchContainer">
+			<div class="row">
+				<div class="col-xs-12 icons">
+					<f:link.page pageUid="{search}" title="Zoeken"><div class="sprite searchIcon"></div></f:link.page>
+					<f:link.page pageUid="{menu}" title="Hoofdmenu"><div class="sprite hamburgerIcon"></div></f:link.page>
+					<f:link.page pageUid="{azindex}" title="a-z index"><div class="sprite azIcon"></div></f:link.page>
+					<button type="button" onclick="location.href = 'contact.html';" class="btn btn-default" title="Contact">Contact</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section id="menu" class="hidden-xs">
+		<div class="row">
+			<div class="col-sm-12">
+				<f:cObject typoscriptObjectPath="lib.mainMenu" />
+			</div>
+		</div>
+	</section>
+</header>
