@@ -71,6 +71,9 @@ tt_content.gridelements_pi1.20.10.setup {
     # Normal Container
     center-offset < .defaultColumnConfig
     center-offset.cObject.file = {$folders.gridelements}CenterOffset.html
+
+    background-container < .defaultColumnConfig
+    background-container.cObject.file = {$folders.gridelements}BackgroundContainer.html
 }
 
 ### tt_content overrides ###

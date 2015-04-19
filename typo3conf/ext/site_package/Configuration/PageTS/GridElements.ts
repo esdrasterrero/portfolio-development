@@ -119,3 +119,25 @@ tx_gridelements.setup.center-offset{
         }
     }
 }
+
+tx_gridelements.setup.background-container{
+    title = Background Container
+    description = Container with image background
+        #flexformDS = FILE:EXT:site_package/Configuration/Flexforms/BackgroundContainer.xml
+
+    config {
+        colCount = 1
+        rowCount = 1
+
+        rows {
+            1 {
+                columns {
+                    1 {
+                        name = Content
+                        colPos = 1
+                    }
+                }
+            }
+        }
+    }
+}
