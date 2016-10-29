@@ -1,2 +1,4 @@
 .DS_Store
 typo3temp/*
+httpdocs/typo3_src/typo3/contrib/vendor/*
+httpdocs/typo3_src/vendor/*
