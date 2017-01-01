@@ -68,12 +68,20 @@ tt_content.gridelements_pi1.20.10.setup {
     fifty-fifty < .defaultColumnConfig
     fifty-fifty.cObject.file = {$folders.gridelements}FiftyFifty.html
 
+    # Four Columns
+    four-columns < .defaultColumnConfig
+    four-columns.cObject.file = {$folders.gridelements}FourColumns.html
+
     # Normal Container
     center-offset < .defaultColumnConfig
     center-offset.cObject.file = {$folders.gridelements}CenterOffset.html
 
     background-container < .defaultColumnConfig
     background-container.cObject.file = {$folders.gridelements}BackgroundContainer.html
+
+    # Slider
+    slider < .defaultColumnConfig
+    slider.cObject.file = {$folders.gridelements}Slider.html
 }
 
 ### tt_content overrides ###
@@ -82,7 +90,27 @@ tt_content.image.20.imageStdWrap >
 tt_content.image.20.imageStdWrapNoWidth >
 tt_content.image.20.imageColumnStdWrap >
 tt_content.image.20.layout.default.value = ###IMAGES######TEXT###
-tt_content.image.20.rendering.singleNoCaption >
+#tt_content.image.20.rendering.singleNoCaption >
+tt_content.image.20.rendering.singleNoCaption.allStdWrap >
+tt_content.image.20.rendering.singleNoCaption.singleStdWrap >
+tt_content.image.20.rendering.singleNoCaption.rowStdWrap >
+tt_content.image.20.rendering.singleNoCaption.noRowsStdWrap >
+tt_content.image.20.rendering.singleNoCaption.lastRowStdWrap >
+tt_content.image.20.rendering.singleNoCaption.columnStdWrap >
+tt_content.image.20.rendering.singleNoCaption.lastRowStdWrap >
+
+tt_content.image.20.rendering.splitCaption.allStdWrap >
+#tt_content.image.20.rendering.splitCaption.singleStdWrap >
+tt_content.image.20.rendering.splitCaption.rowStdWrap >
+tt_content.image.20.rendering.splitCaption.noRowsStdWrap >
+tt_content.image.20.rendering.splitCaption.lastRowStdWrap >
+tt_content.image.20.rendering.splitCaption.columnStdWrap >
+tt_content.image.20.rendering.splitCaption.lastRowStdWrap >
+
+tt_content.image.20.rendering.splitCaption.singleStdWrap.wrap = ###CAPTION### | ###PARAMS###
+tt_content.image.20.rendering.splitCaption.caption.wrap = <p> | </p>
+tt_content.image.20.rendering.splitCaption.caption.wrap.override = <p> | </p>
+
 tt_content.image.20.1.layout.default.element = <img class="img-responsive" src="###SRC###" ###PARAMS######ALTPARAMS######BORDER######SELFCLOSINGTAGSLASH###>
 
 
@@ -97,4 +125,13 @@ tt_content.stdWrap.innerWrap.cObject.default.30.cObject.menu.default.override >
 [globalVar = TSFE:id = {$pages.atoz}]
 	tt_content.menu.20.3.stdWrap.outerWrap = <div class="wrapper"><ul class="nav affix-top" data-spy="affix" data-offset-top="125">|</ul></div>
 	tt_content.menu.20.3.1.NO.wrapItemAndSub = <li>|</li>
+[global]
+
+# bodyTag
+[globalVar = TSFE:id != 1]
+page.bodyTag >
+
+page.bodyTagCObject = TEXT
+page.bodyTagCObject.value= main
+page.bodyTagCObject.wrap = <body class="|">
 [global]
